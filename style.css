@@ -344,6 +344,45 @@ Layout
     justify-items: center;
   }
 }
+@media screen and (min-width:992px) {
+  .main{
+    grid-template-columns: 200px 1fr 50px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "a a a"
+    "b c d"
+    "b c d"
+    "e e e"
+    ;
+  }
+  .header{
+    grid-area: a;
+  }
+  .navbar{
+    grid-area: b;
+  }
+  .content{
+    grid-area: c;
+  }
+  .sidbar{
+    grid-area: d;
+  }
+  .footer{
+    grid-area: e;
+  }
+  .navbar ul {
+    grid-template-columns: 1fr;
+    align-items: center;
+    min-height: 100%;
+  }
+  .sidebar {
+    grid-template-columns: 1fr;
+    align-items: center;
+    min-height: 100%;
+    background: var(--darkGrey);
+  }
+}
+
 
 
 
